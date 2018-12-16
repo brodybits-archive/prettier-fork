@@ -3738,9 +3738,9 @@ function printMethod(path, options, print) {
 
   parts.push(key);
 
-  if (options.spaceBeforeFunctionParen && !node.value.async) {
-    parts.push(" ");
-  }
+  // if (options.spaceBeforeFunctionParen && !node.value.async) {
+  //   parts.push(" ");
+  // }
 
   parts.push(
     concat(
@@ -3749,6 +3749,7 @@ function printMethod(path, options, print) {
           printFunctionTypeParameters(valuePath, options, print),
           group(
             concat([
+              options.spaceBeforeFunctionParen ? " " : "",
               printFunctionParams(valuePath, print, options),
               printReturnType(valuePath, print, options)
             ])
@@ -4235,14 +4236,15 @@ function printFunctionDeclaration(path, print, options) {
     parts.push(" ", path.call(print, "id"));
   }
 
-  if (options.spaceBeforeFunctionParen) {
-    parts.push(" ");
-  }
+  // if (options.spaceBeforeFunctionParen) {
+  //   parts.push(" ");
+  // }
 
   parts.push(
     printFunctionTypeParameters(path, options, print),
     group(
       concat([
+              options.spaceBeforeFunctionParen ? " " : "",
         printFunctionParams(path, print, options),
         printReturnType(path, print, options)
       ])

@@ -229,16 +229,16 @@ var bar = function foo () {
   // ...
 };
 
-function baz <T>(a: T) {
+function baz<T> (a: T) {
   // ...
 }
 
 // tslint seems to miss this one:
-var baz = function <T>(a: T) {
+var baz = function<T> (a: T) {
   // ...
 };
 
-var baz = function foo <T>(a: T) {
+var baz = function foo<T> (a: T) {
   // ...
 };
 
@@ -249,7 +249,7 @@ class Foo {
   public bar () {
     // ...
   }
-  public baz <T>(a: T) {
+  public baz<T> (a: T) {
     // ...
   }
 }
@@ -258,7 +258,7 @@ var foo = {
   bar () {
     // ...
   },
-  baz <T>(a: T) {
+  baz<T> (a: T) {
     // ...
   }
 };
