@@ -1,2 +1,2 @@
-run_spec(__dirname, ["flow", "typescript"], { spaceBeforeFunctionParen: true });
-run_spec(__dirname, ["flow", "typescript"]);
+run_spec(__dirname, ["typescript"], { spaceBeforeFunctionParen: true });
+run_spec(__dirname, ["typescript"]);
