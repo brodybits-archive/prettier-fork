@@ -12,7 +12,7 @@ function identity<T> (value: T): T {
 }
 
 interface Foo<T> {
-  getter (value: T): T
+  getter(value: T): T
 }
 
 class Example<T> implements Foo<T> {
