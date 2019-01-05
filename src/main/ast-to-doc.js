@@ -35,9 +35,9 @@ const docUtils = doc.utils;
  */
 function printAstToDoc(ast, options, alignmentSize = 0) {
   if (options.standard) {
-    options.semi = false
-    options.singleQuote = true
-    options.jsxSingleQuote = true
+    options.semi = false;
+    options.singleQuote = true;
+    options.jsxSingleQuote = true;
   }
 
   const printer = options.printer;

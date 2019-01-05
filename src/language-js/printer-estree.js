@@ -917,7 +917,7 @@ function printPathNoParens(path, options, print, args) {
 
       if (n.delegate) {
         if (options.standard) {
-          parts.push(" ")
+          parts.push(" ");
         }
         parts.push("*");
       }
@@ -4232,7 +4232,7 @@ function printFunctionDeclaration(path, print, options) {
 
   if (n.generator) {
     if (options.standard) {
-      parts.push(" ")
+      parts.push(" ");
     }
     parts.push("*");
   }
@@ -4284,7 +4284,7 @@ function printObjectMethod(path, options, print) {
   } else {
     parts.push(key);
     if (options.standard) {
-      parts.push(" ")
+      parts.push(" ");
     }
   }
 
