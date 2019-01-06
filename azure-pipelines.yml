@@ -84,8 +84,8 @@ jobs:
       vmImage: macos-10.13
     strategy:
       matrix:
-        Node_v4:
-          node_version: 4
+        Node_v6:
+          node_version: 6
           ENABLE_TEST_RESULTS: "" # jest-junit requires node v6+
         Node_v10:
           node_version: 10
