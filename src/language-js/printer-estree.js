@@ -975,6 +975,9 @@ function printPathNoParens(path, options, print, args) {
       parts.push("yield");
 
       if (n.delegate) {
+        if (options.yieldStarSpacing) {
+          parts.push(" ");
+        }
         parts.push("*");
       }
       if (n.argument) {
@@ -3794,6 +3797,9 @@ function printMethod(path, options, print) {
   if (!kind || kind === "init" || kind === "method" || kind === "constructor") {
     if (node.value.generator) {
       parts.push("*");
+      if (options.generatorStarSpacing) {
+        parts.push(" ");
+      }
     }
   } else {
     assert.ok(kind === "get" || kind === "set");
@@ -3807,14 +3813,16 @@ function printMethod(path, options, print) {
     key = concat(["[", key, "]"]);
   }
 
+  parts.push(key);
+
   parts.push(
-    key,
     concat(
       path.call(
         valuePath => [
           printFunctionTypeParameters(valuePath, options, print),
           group(
             concat([
+              options.spaceBeforeFunctionParen ? " " : "",
               printFunctionParams(valuePath, print, options),
               printReturnType(valuePath, print, options)
             ])
@@ -3923,12 +3931,18 @@ const functionCompositionFunctionNames = new Set([
   "connect", // Redux
   "createSelector" // Reselect
 ]);
+const ordinaryMethodNames = new Set([
+  "connect" // GObject, MongoDB
+]);
 
 function isFunctionCompositionFunction(node) {
   switch (node.type) {
     case "OptionalMemberExpression":
     case "MemberExpression": {
-      return isFunctionCompositionFunction(node.property);
+      return (
+        isFunctionCompositionFunction(node.property) &&
+        !ordinaryMethodNames.has(node.property.name)
+      );
     }
     case "Identifier": {
       return functionCompositionFunctionNames.has(node.name);
@@ -4295,6 +4309,9 @@ function printFunctionDeclaration(path, print, options) {
   parts.push("function");
 
   if (n.generator) {
+    if (options.generatorStarSpacing) {
+      parts.push(" ");
+    }
     parts.push("*");
   }
   if (n.id) {
@@ -4305,6 +4322,10 @@ function printFunctionDeclaration(path, print, options) {
     printFunctionTypeParameters(path, options, print),
     group(
       concat([
+        options.spaceBeforeFunctionParen ||
+        (options.generatorStarSpacing && !n.id)
+          ? " "
+          : "",
         printFunctionParams(path, print, options),
         printReturnType(path, print, options)
       ])
@@ -4325,6 +4346,9 @@ function printObjectMethod(path, options, print) {
   }
   if (objMethod.generator) {
     parts.push("*");
+    if (options.generatorStarSpacing) {
+      parts.push(" ");
+    }
   }
   if (
     objMethod.method ||
@@ -4340,6 +4364,9 @@ function printObjectMethod(path, options, print) {
     parts.push("[", key, "]");
   } else {
     parts.push(key);
+    if (options.spaceBeforeFunctionParen) {
+      parts.push(" ");
+    }
   }
 
   parts.push(

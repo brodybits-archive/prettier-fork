@@ -1,4 +1,78 @@
-# 1.15.3
+# Changelog
+
+<!-- --
+To get recent changes on prettierx (TBD brodybits\/prettier) in pretty format:
+$ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[brodybits\/prettierx#\1\]\(https:\/\/github.com\/brodybits\/prettierx\/pull\/\1\)/'
+
+To get recent changes on prettier in pretty format:
+$ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[#\1\]\(https:\/\/github.com\/prettier\/prettier\/pull\/\1\)/'
+-- -->
+
+## prettierx 0.2.0
+
+- fix(javascript): skip .connect() method when composing fun ([prettier#5739](https://github.com/prettier/prettier/pull/5739))
+- docs: remove redundant "./" from relative links ([prettier#5741](https://github.com/prettier/prettier/pull/5741))
+- Fix formatting of lists in SCSS property/variable values ([prettier#5710](https://github.com/prettier/prettier/pull/5710))
+- Escape spaces within file names in pre-commit hook script ([prettier#5721](https://github.com/prettier/prettier/pull/5721))
+- typescript: remove unneeded parentheses around type annotation ([prettier#5724](https://github.com/prettier/prettier/pull/5724))
+- Add solidity plugin to list of plugins ([prettier#5726](https://github.com/prettier/prettier/pull/5726))
+- chore(website): upgrade react-dom to 16.3.3 ([prettier#5720](https://github.com/prettier/prettier/pull/5720))
+- Update Webstorm integration docs ([prettier#5694](https://github.com/prettier/prettier/pull/5694))
+
+## prettierx 0.1.0
+
+- standard-like formatting ([brodybits/prettierx#32](https://github.com/brodybits/prettierx/pull/32))
+- Drop support for Node.js version 4 ([brodybits/prettierx#31](https://github.com/brodybits/prettierx/pull/31))
+
+## prettierx 0.0.3
+
+- prettierx fix space-before-function-paren - babel parser ([brodybits/prettierx#29](https://github.com/brodybits/prettierx/pull/29))
+
+## prettierx 0.0.2
+
+- Update copyright line ([#5455](https://github.com/prettier/prettier/pull/5455))
+- fix(mdx): handle inline html correctly ([#5704](https://github.com/prettier/prettier/pull/5704))
+
+## prettierx 0.0.1
+
+- prettierx space-before-function-paren option ([brodybits/prettierx#6](https://github.com/brodybits/prettierx/pull/6))
+- Update package.json, docs, scripts, tests, etc. for prettierx
+
+### prettier 1ca4731 (1.16.0-dev)
+
+- docs: Happy New Year! 🎁 ([#5699](https://github.com/prettier/prettier/pull/5699))
+- fix(ng,vue): add parens to avoid unexpected `}}` in interpolations ([#5657](https://github.com/prettier/prettier/pull/5657))
+- feat: add babel-flow ([#5685](https://github.com/prettier/prettier/pull/5685))
+- fix(playground): backward compatibility for --parser babylon ([#5690](https://github.com/prettier/prettier/pull/5690))
+- fix(playground): code sample for --parser babylon
+- fix(playground): backward compatibility for --parser babylon ([#5688](https://github.com/prettier/prettier/pull/5688))
+- Rename "babylon" with "babel" ([#5647](https://github.com/prettier/prettier/pull/5647))
+- Restore --check option docs ([#5674](https://github.com/prettier/prettier/pull/5674))
+- feat(website): enable docs versioning ([#5676](https://github.com/prettier/prettier/pull/5676))
+- Temporary remove --check docs until 1.16 is released to avoid confusion ([#5671](https://github.com/prettier/prettier/pull/5671))
+- fix(flow,ts): format `/* HTML */` templates ([#5658](https://github.com/prettier/prettier/pull/5658))
+- Add --check option ([#5629](https://github.com/prettier/prettier/pull/5629))
+- chore: update azure pipelines ([#5611](https://github.com/prettier/prettier/pull/5611))
+- Update string-width to support emoji natively ([#5646](https://github.com/prettier/prettier/pull/5646))
+- Fix formatting with --range-start / --range-end ([#5632](https://github.com/prettier/prettier/pull/5632))
+- fix(printer-postcss): ignore escape \ and escaped / in Less ([#5597](https://github.com/prettier/prettier/pull/5597))
+- feat(html): format script with "application/ld+json" ([#5642](https://github.com/prettier/prettier/pull/5642))
+- Add support for class private methods ([#5637](https://github.com/prettier/prettier/pull/5637))
+- fix(vue): tag names are case-sensitive ([#5606](https://github.com/prettier/prettier/pull/5606))
+- fix(javascript): correct indentation for expression in root template ([#5607](https://github.com/prettier/prettier/pull/5607))
+- Fix incorrect grammar ([#5626](https://github.com/prettier/prettier/pull/5626))
+- Remove the dynamic `require()` call in the standalone bundle ([#5612](https://github.com/prettier/prettier/pull/5612))
+- test: update snapshots
+- feat(html): preserve surrounding linebreaks ([#5596](https://github.com/prettier/prettier/pull/5596))
+- Add support for the React `useEffect` hook ([#5608](https://github.com/prettier/prettier/pull/5608))
+- Don’t run tests on Node 6 ([#5613](https://github.com/prettier/prettier/pull/5613))
+- fix: get rid of CRLF ([#5494](https://github.com/prettier/prettier/pull/5494))
+- Reformat the first version info in the option docs ([#5604](https://github.com/prettier/prettier/pull/5604))
+- Update example for `*.vue` ([#5605](https://github.com/prettier/prettier/pull/5605))
+- feat: add mjml extension to html language ([#5505](https://github.com/prettier/prettier/pull/5505))
+- feat(html): smart quote for attributes ([#5590](https://github.com/prettier/prettier/pull/5590))
+
+### prettier 1.15.3
 
 [diff](https://github.com/prettier/prettier/compare/1.15.2...1.15.3)
 
@@ -35,7 +109,7 @@
 - CLI: report status code `0` for `--list-different` + `--write` ([#5512](https://github.com/prettier/prettier/pull/5512))
 - Standalone: fix a regression for browser compatibility ([#5560](https://github.com/prettier/prettier/pull/5560))
 
-# 1.15.2
+### prettier 1.15.2
 
 [diff](https://github.com/prettier/prettier/compare/1.15.1...1.15.2)
 
@@ -65,32 +139,32 @@
 - Markdown: identify CJK correctly ([#5402](https://github.com/prettier/prettier/pull/5402))
 - MDX: treat JSX code block same as in Markdown ([#5391](https://github.com/prettier/prettier/pull/5391))
 
-# 1.15.1
+### prettier 1.15.1
 
 [diff](https://github.com/prettier/prettier/compare/1.15.0...1.15.1)
 
 - Markdown: do not keep increasing backslashes for dollar sign ([#5358](https://github.com/prettier/prettier/pull/5358))
 
-# 1.15.0
+### prettier 1.15.0
 
 [diff](https://github.com/prettier/prettier/compare/1.14.3...1.15.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2018/11/07/1.15.0.html)
 
-# 1.14.3
+### prettier 1.14.3
 
 [diff](https://github.com/prettier/prettier/compare/1.14.2...1.14.3)
 
 - Chore: add missing LICENSE ([#5114](https://github.com/prettier/prettier/pull/5114))
 
-# 1.14.2
+### prettier 1.14.2
 
 [diff](https://github.com/prettier/prettier/compare/1.14.1...1.14.2)
 
 - YAML: fix the line ending issue on Windows ([#4957](https://github.com/prettier/prettier/pull/4957))
 - TypeScript: better error message ([#4947](https://github.com/prettier/prettier/pull/4947))
 
-# 1.14.1
+### prettier 1.14.1
 
 [diff](https://github.com/prettier/prettier/compare/1.14.0...1.14.1)
 
@@ -110,19 +184,19 @@
 - CLI: ignore .git, .svn and .hg directories ([#4906](https://github.com/prettier/prettier/pull/4906))
 - CLI: support TOML configuration files ([#4877](https://github.com/prettier/prettier/pull/4877))
 
-# 1.14.0
+### prettier 1.14.0
 
 [diff](https://github.com/prettier/prettier/compare/1.13.7...1.14.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2018/07/29/1.14.0.html)
 
-# 1.13.7
+### prettier 1.13.7
 
 [diff](https://github.com/prettier/prettier/compare/1.13.6...1.13.7)
 
 - Remove calls to `eval("require")` in the distributed code ([#4766](https://github.com/prettier/prettier/pull/4766))
 
-# 1.13.6
+### prettier 1.13.6
 
 [diff](https://github.com/prettier/prettier/compare/1.13.5...1.13.6)
 
@@ -130,7 +204,7 @@
 - Preserve type parameters of import-types in TypeScript ([#4662](https://github.com/prettier/prettier/pull/4662))
 - Preserve parens for type casting for sub-item ([#4648](https://github.com/prettier/prettier/pull/4648))
 
-# 1.13.5
+### prettier 1.13.5
 
 [diff](https://github.com/prettier/prettier/compare/1.13.4...1.13.5)
 
@@ -139,38 +213,38 @@
 - Preserve decorator on TypeScript interfaces ([#4632](https://github.com/prettier/prettier/pull/4632))
 - Inline \_ or \$ in the root of a method chain ([#4621](https://github.com/prettier/prettier/pull/4621))
 
-# 1.13.4
+### prettier 1.13.4
 
 [diff](https://github.com/prettier/prettier/compare/1.13.3...1.13.4)
 
 - Fix a regression when printing graphql-in-js ([#4616](https://github.com/prettier/prettier/pull/4616))
 
-# 1.13.3
+### prettier 1.13.3
 
 [diff](https://github.com/prettier/prettier/compare/1.13.2...1.13.3)
 
 - Fix a regression when printing `hasOwnProperty` and other functions in `Object`'s prototype ([#4603](https://github.com/prettier/prettier/pull/4603))
 - Fix a regression in exit status when using `--debug-check` and `--list-different` ([#4600](https://github.com/prettier/prettier/pull/4600))
 
-# 1.13.2
+### prettier 1.13.2
 
 [diff](https://github.com/prettier/prettier/compare/1.13.1...1.13.2)
 
 - Republished 1.13.1 with missing README included this time
 
-# 1.13.1
+### prettier 1.13.1
 
 [diff](https://github.com/prettier/prettier/compare/1.13.0...1.13.1)
 
 - Revert default parser change in API (still present in CLI)
 
-# 1.13.0
+### prettier 1.13.0
 
 [diff](https://github.com/prettier/prettier/compare/1.12.1...1.13.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2018/05/23/1.13.0.html)
 
-# 1.12.1
+### prettier 1.12.1
 
 [diff](https://github.com/prettier/prettier/compare/1.12.0...1.12.1)
 
@@ -178,44 +252,44 @@
 - Wrap awaits in unary expressions with parens ([#4315](https://github.com/prettier/prettier/pull/4315))
 - Fix style regression on flow union types ([#4325](https://github.com/prettier/prettier/pull/4325))
 
-# 1.12.0
+### prettier 1.12.0
 
 [diff](https://github.com/prettier/prettier/compare/1.11.1...1.12.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2018/04/11/1.12.0.html)
 
-# 1.11.1
+### prettier 1.11.1
 
 [diff](https://github.com/prettier/prettier/compare/1.11.0...1.11.1)
 
 - 1.11.0 was incorrectly shipped with the wrong version of the TypeScript parser, which broke conditional types. This release fixes it.
 - Fixed an issue relating to deprecated parsers ([#4072](https://github.com/prettier/prettier/pull/4072))
 
-# 1.11.0
+### prettier 1.11.0
 
 [diff](https://github.com/prettier/prettier/compare/1.10.2...1.11.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2018/02/26/1.11.0.html)
 
-# 1.10.2
+### prettier 1.10.2
 
 [diff](https://github.com/prettier/prettier/compare/1.10.1...1.10.2)
 
 - Fixed an issue printing .vue files with self-closing tags. (#3705 by duailibe)
 
-# 1.10.1
+### prettier 1.10.1
 
 [diff](https://github.com/prettier/prettier/compare/1.10.0...1.10.1)
 
 - Fixed an issue where the CLI fails to resolve a file.
 
-# 1.10.0
+### prettier 1.10.0
 
 [diff](https://github.com/prettier/prettier/compare/1.9.2...1.10.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2018/01/10/1.10.0.html)
 
-# 1.9.2
+### prettier 1.9.2
 
 [diff](https://github.com/prettier/prettier/compare/1.9.1...1.9.2)
 
@@ -230,7 +304,7 @@
 - Fix closing parens on multi-line intersection/union type (#3436 by josephfrazier)
 - Don't break single argument destructuring arguments (for arrays and with simple default values) (#3443 by duailibe)
 
-# 1.9.1
+### prettier 1.9.1
 
 [diff](https://github.com/prettier/prettier/compare/1.9.0...1.9.1)
 
@@ -240,13 +314,13 @@
 - Fixed a bug when using glob `**/*` which would try to format directories (#3411 by duailibe)
 - Fixed a bug when `.editorconfig` had `max_line_length = "off"` (#3412 by duailibe)
 
-# 1.9.0
+### prettier 1.9.0
 
 [diff](https://github.com/prettier/prettier/compare/1.8.2...1.9.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/12/05/1.9.0.html)
 
-# 1.8.2
+### prettier 1.8.2
 
 [diff](https://github.com/prettier/prettier/compare/1.8.1...1.8.2)
 
@@ -255,7 +329,7 @@
 - TypeScript: Parenthesis around TSAsExpression inside TSAbstractClassDeclaration (#3191 by duailibe)
 - JSON: Print JSON top comments as leading comments of root node (#3187 by duailibe)
 
-# 1.8.1
+### prettier 1.8.1
 
 [diff](https://github.com/prettier/prettier/compare/1.8.0...1.8.1)
 
@@ -266,13 +340,13 @@
 - Markdown: Do not break on unbreakable place (#3177 by ikatyang)
 - Markdown: Do not break before special prefix (#3172 by ikatyang)
 
-# 1.8.0
+### prettier 1.8.0
 
 [diff](https://github.com/prettier/prettier/compare/1.7.4...1.8.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/11/07/1.8.0.html)
 
-# 1.7.4
+### prettier 1.7.4
 
 [diff](https://github.com/prettier/prettier/compare/1.7.3...1.7.4)
 
@@ -280,7 +354,7 @@
 - Update cosmiconfig to v3.1.0 (#2952 by ikatyang)
 - Respect --stdin-filepath, regardless of config source (#2948 by azz)
 
-# 1.7.3
+### prettier 1.7.3
 
 [diff](https://github.com/prettier/prettier/compare/1.7.2...1.7.3)
 
@@ -288,13 +362,13 @@
 - Fix: ignore and show warning for unknown option from config file (#2929 by ikatyang)
 - Don't use parens with optional chaining meber expressions (#2921 by azz)
 
-# 1.7.2
+### prettier 1.7.2
 
 [diff](https://github.com/prettier/prettier/compare/1.7.1...1.7.2)
 
 - Revert "Fix line break in test declarations with a single argument function declaration" (#2912)
 
-# 1.7.1
+### prettier 1.7.1
 
 [diff](https://github.com/prettier/prettier/compare/1.7.0...1.7.1)
 
@@ -323,13 +397,13 @@
 - Fix editor styling on empty editors (#2904 by jakegavin)
 - Fix printing of comments between decorators and method names (#2906 by azz)
 
-# 1.7.0
+### prettier 1.7.0
 
 [diff](https://github.com/prettier/prettier/compare/1.6.1...1.7.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/09/15/1.7.0.html)
 
-# 1.6.1
+### prettier 1.6.1
 
 [diff](https://github.com/prettier/prettier/compare/1.6.0...1.6.1)
 
@@ -338,43 +412,43 @@
 - Fix union type with type params regression (#2688)
 - Fix flow parenthesis regression (#2687)
 
-# 1.6.0
+### prettier 1.6.0
 
 [diff](https://github.com/prettier/prettier/compare/1.5.3...1.6.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/08/29/1.6.0.html)
 
-# 1.5.3
+### prettier 1.5.3
 
 [diff](https://github.com/prettier/prettier/compare/1.5.2...1.5.3)
 
 - Force trailingComma option to "none" when parser is JSON (#2335)
 
-# 1.5.2
+### prettier 1.5.2
 
 [diff](https://github.com/prettier/prettier/compare/1.5.1...1.5.2)
 
 - Full printing support for GraphQL and various bug fixes
 - Fixes for range formatting for JSON and CSS (#2295, #2298)
 
-# 1.5.1
+### prettier 1.5.1
 
 [diff](https://github.com/prettier/prettier/compare/1.5.0...1.5.1)
 
 - Go back to babylon beta 13 (#2289)
 - Inline import('x') to avoid having trailing comma (#2288)
 
-# 1.5.0
+### prettier 1.5.0
 
 [diff](https://github.com/prettier/prettier/compare/1.4.4...1.5.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/06/28/1.5.0.html)
 
-# 1.4.4
+### prettier 1.4.4
 
 🔗 Fix postcss, I forgot to re-run the build script :(
 
-# 1.4.3
+### prettier 1.4.3
 
 [diff](https://github.com/prettier/prettier/compare/1.4.2...1.4.3)
 
@@ -387,7 +461,7 @@ Formatting change:
 
 Lots of small fixes, mainly for TypeScript.
 
-# 1.4.2
+### prettier 1.4.2
 
 [diff](https://github.com/prettier/prettier/compare/1.4.1...1.4.2)
 
@@ -396,25 +470,25 @@ Lots of small fixes, mainly for TypeScript.
 - fix(typescript): no semi after export default abstract class, fixes (#1937)
 - TypeScript: fix trailing comma in enum (#1938)
 
-# 1.4.1
+### prettier 1.4.1
 
 [diff](https://github.com/prettier/prettier/compare/1.4.0...1.4.1)
 
 - Lots of fixes for TypeScript and regressions from 1.4.0. If you are using 1.4.0, you should migrate to 1.4.1 asap ;)
 
-# 1.4.0
+### prettier 1.4.0
 
 [diff](https://github.com/prettier/prettier/compare/1.3.1...1.4.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/06/03/1.4.0.html)
 
-# 1.3.1
+### prettier 1.3.1
 
 [diff](https://github.com/prettier/prettier/compare/1.3.0...1.3.1)
 
 - Respect template inline-ness (#1497)
 
-# 1.3.0
+### prettier 1.3.0
 
 [diff](https://github.com/prettier/prettier/compare/1.2.2...1.3.0)
 
@@ -468,19 +542,19 @@ Lots of small fixes, mainly for TypeScript.
 - Break inline object first in function arguments (#1453) (#1173)
 - Inline template literals as arrow body (#1485)
 
-# 1.2.2
+### prettier 1.2.2
 
 [diff](https://github.com/prettier/prettier/compare/1.2.1...1.2.2)
 
 - Only break for conditionals (#1350)
 
-# 1.2.1
+### prettier 1.2.1
 
 [diff](https://github.com/prettier/prettier/compare/1.2.0...1.2.1)
 
 - Fix duplicate comments in classes (#1349)
 
-# 1.2.0
+### prettier 1.2.0
 
 [diff](https://github.com/prettier/prettier/compare/1.1.0...1.2.0)
 
@@ -512,7 +586,7 @@ Lots of small fixes, mainly for TypeScript.
 - Break if () if conditional inside breaks (#1344)
 - Don't inline paren at right of arguments (#1345)
 
-# 1.1.0
+### prettier 1.1.0
 
 [diff](https://github.com/prettier/prettier/compare/1.0.0...1.1.0)
 
@@ -528,17 +602,17 @@ Lots of small fixes, mainly for TypeScript.
 - Fixing n.comments check in printer (#1239)
 - [WIP] no-semi comments (#1257)
 
-# 1.0.1
+### prettier 1.0.1
 
 - change semi default
 
-# 1.0.0
+### prettier 1.0.0
 
 [diff](https://github.com/prettier/prettier/compare/0.22.0...1.0.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2017/04/13/1.0.0.html)
 
-# 0.22.0
+### prettier 0.22.0
 
 [diff](https://github.com/prettier/prettier/compare/0.21.0...0.22.0)
 
@@ -573,7 +647,7 @@ Lots of small fixes, mainly for TypeScript.
 - Inline BinaryExpressions inside JSXExpression (#965)
 - Only allow same-line arrow-less body for explicit nodes (#966)
 
-# 0.21.0
+### prettier 0.21.0
 
 [diff](https://github.com/prettier/prettier/compare/0.20.0...0.21.0)
 
@@ -596,7 +670,7 @@ Lots of small fixes, mainly for TypeScript.
 - Do not break long it calls (#842)
 - Fix flow union comments (#853)
 
-# 0.20.0
+### prettier 0.20.0
 
 [diff](https://github.com/prettier/prettier/compare/0.19.0...0.20.0)
 
@@ -618,7 +692,7 @@ Lots of small fixes, mainly for TypeScript.
 - Update list of related projects (#833)
 - Allow breaking for logical expressions in member chains (#827)
 
-# 0.19.0
+### prettier 0.19.0
 
 [diff](https://github.com/prettier/prettier/compare/0.18.0...0.19.0)
 
@@ -652,7 +726,7 @@ Lots of small fixes, mainly for TypeScript.
 - [RFC] Add parenthesis around && inside of || (#780)
 - Fix tests on node 4
 
-# 0.18.0
+### prettier 0.18.0
 
 [diff](https://github.com/prettier/prettier/compare/0.17.1...0.18.0)
 
@@ -671,13 +745,13 @@ Lots of small fixes, mainly for TypeScript.
 - Fix trailing new lines preservation (#724)
 - Unified Split
 
-# 0.17.1
+### prettier 0.17.1
 
 [diff](https://github.com/prettier/prettier/compare/0.17.0...0.17.1)
 
 - Use `readline` api to manipulate `process.stdout` output. (#687)
 
-# 0.17.0
+### prettier 0.17.0
 
 [diff](https://github.com/prettier/prettier/compare/0.16.0...0.17.0)
 
@@ -712,7 +786,7 @@ Lots of small fixes, mainly for TypeScript.
 - Fix comments in return statement argument (#657)
 - [RFC] Introduce prettier-ignore-next (#671)
 
-# 0.16.0
+### prettier 0.16.0
 
 [diff](https://github.com/prettier/prettier/compare/0.15.0...0.16.0)
 
@@ -737,7 +811,7 @@ Lots of small fixes, mainly for TypeScript.
 - Fix single indented JSX comment (#596)
 - Print dangling on ast on all the paths
 
-# 0.15.0
+### prettier 0.15.0
 
 [diff](https://github.com/prettier/prettier/compare/0.14.1...0.15.0)
 
@@ -758,14 +832,14 @@ Lots of small fixes, mainly for TypeScript.
 - Whitelist UnaryExpression for parentless objects (#545)
 - Make comments inside of MemberExpression look good (#556)
 
-# 0.14.1
+### prettier 0.14.1
 
 [diff](https://github.com/prettier/prettier/compare/0.14.0...0.14.1)
 
 - Fix range for object newline detection (#520)
   - a bugfix for "Keep expanded objects expanded" (#495)
 
-# 0.14.0
+### prettier 0.14.0
 
 [diff](https://github.com/prettier/prettier/compare/0.13.0...0.14.0)
 
@@ -778,7 +852,7 @@ Lots of small fixes, mainly for TypeScript.
 - Do not always put an empty lines after directives (#505)
 - Print numbers in a uniform way (#498)
 
-# 0.13.0
+### prettier 0.13.0
 
 [diff](https://github.com/prettier/prettier/compare/0.12.0...0.13.0)
 
@@ -788,7 +862,7 @@ Lots of small fixes, mainly for TypeScript.
 - [JSX] Handle each line of text separately (#455)
 - Proper support for dangling comments (#492)
 
-# 0.12.0
+### prettier 0.12.0
 
 [diff](https://github.com/prettier/prettier/compare/0.11.0...0.12.0)
 
@@ -829,7 +903,7 @@ Lots of small fixes, mainly for TypeScript.
 - Mention eslint-plugin-prettier in Related Projects (#490)
 - Stop using conditionalGroup inside of UnionTypeAnnotation (#491)
 
-# 0.11.0
+### prettier 0.11.0
 
 [diff](https://github.com/prettier/prettier/compare/0.0.10...0.11.0)
 
@@ -880,7 +954,7 @@ Now using minor versions instead of patch versions for the releases.
 - Use babel-code-frame for syntax errors (#367)
 - Update yarn.lock
 
-# 0.0.10
+### prettier 0.0.10
 
 [diff](https://github.com/prettier/prettier/compare/0.0.9...0.0.10)
 
@@ -906,7 +980,7 @@ Now using minor versions instead of patch versions for the releases.
 - Indent while test the same way as if test (#352)
 - Add debugging support for doc IR (#347)
 
-# 0.0.9
+### prettier 0.0.9
 
 [diff](https://github.com/prettier/prettier/compare/0.0.8...0.0.9)
 
@@ -936,7 +1010,7 @@ Now using minor versions instead of patch versions for the releases.
 - [JSX] Split elements on newlines and preserve whitespace (w/@yamafaktory) (#234)
 - Print binary and logical expressions in a nicer format (#262)
 
-# 0.0.8
+### prettier 0.0.8
 
 [diff](https://github.com/prettier/prettier/compare/e447971...0192d58)
 
@@ -967,7 +1041,7 @@ Now using minor versions instead of patch versions for the releases.
 - Fix parens for functions inside TaggedTemplateExpression (#259)
 - Preserve the way numbers were written (#257)
 
-# 0.0.7
+### prettier 0.0.7
 
 [diff](https://github.com/prettier/prettier/compare/7e31610...6f5df0e)
 
@@ -982,7 +1056,7 @@ Now using minor versions instead of patch versions for the releases.
 - Fix DeclareInterface (#182)
 - Change test to workaround babylon bug (#184)
 
-# 0.0.6
+### prettier 0.0.6
 
 [diff](https://github.com/prettier/prettier/compare/faed09c...3af7da5)
 

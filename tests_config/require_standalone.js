@@ -17,7 +17,7 @@ const sources = [
   "parser-typescript.js",
   "parser-yaml.js"
 ].map(filename =>
-  fs.readFileSync(path.join(process.env.PRETTIER_DIR, filename), "utf-8")
+  fs.readFileSync(path.join(process.env.PRETTIERX_DIR, filename), "utf-8")
 );
 
 const sandbox = vm.createContext();
@@ -28,7 +28,7 @@ vm.runInContext(sources.join(";"), sandbox);
 module.exports = {
   formatWithCursor(input, options) {
     return vm.runInNewContext(
-      `prettier.formatWithCursor(
+      `prettierx.formatWithCursor(
         $$$input,
         Object.assign({ plugins: prettierPlugins }, $$$options)
       );`,
@@ -39,7 +39,7 @@ module.exports = {
   __debug: {
     parse(input, options, massage) {
       return vm.runInNewContext(
-        `prettier.__debug.parse(
+        `prettierx.__debug.parse(
           $$$input,
           Object.assign({ plugins: prettierPlugins }, $$$options),
           ${JSON.stringify(massage)}

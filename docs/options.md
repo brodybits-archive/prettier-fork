@@ -170,6 +170,30 @@ These options cannot be used with `cursorOffset`.
 | `0`        | `--range-start <int>` | `rangeStart: <int>` |
 | `Infinity` | `--range-end <int>`   | `rangeEnd: <int>`   |
 
+## Space before function parentheses
+
+Put a space before function parenthesis.
+
+| Default | CLI Override                    | API Override                       |
+| ------- | ------------------------------- | ---------------------------------- |
+| `false` | `--space-before-function-paren` | `spaceBeforeFunctionParen: <bool>` |
+
+## Generator star spacing
+
+Add spaces around the star (\*) in generator functions (before and after - from eslint).
+
+| Default | CLI Override               | API Override                   |
+| ------- | -------------------------- | ------------------------------ |
+| `false` | `--generator-star-spacing` | `generatorStarSpacing: <bool>` |
+
+## Yield star spacing
+
+Add spaces around the star (\*) in `yield_` expressions (before and after - from eslint).
+
+| Default | CLI Override           | API Override               |
+| ------- | ---------------------- | -------------------------- |
+| `false` | `--yield-star-spacing` | `yieldStarSpacing: <bool>` |
+
 ## Parser
 
 Specify which parser to use.
@@ -310,8 +334,8 @@ Doing so produces a large `git diff`, and if it get unnoticed during code review
 If you want to make sure that your git repository only contains Linux-style line endings in files covered by Prettier:
 
 1. Set `endOfLine` option to `lf`
-1. Configure [a pre-commit hook](./precommit.md) that will run Prettier
-1. Configure Prettier to run in your CI pipeline using [`--check` flag](./cli.md#check)
+1. Configure [a pre-commit hook](precommit.md) that will run Prettier
+1. Configure Prettier to run in your CI pipeline using [`--check` flag](cli.md#check)
 1. Ask Windows users to run `git config core.autocrlf false` before working on your repo so that git did not convert `LF` to `CRLF` on checkout.
    Alternatively, you can add `* text=auto eol=lf` to the repo's `.gitattributes` file to achieve this.
 
