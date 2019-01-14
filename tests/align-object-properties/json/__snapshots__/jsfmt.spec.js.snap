@@ -2,6 +2,7 @@
 
 exports[`o1.json 1`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
                                                                                 | printWidth
@@ -24,6 +25,7 @@ printWidth: 80
 
 exports[`o1.json 2`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
 trailingComma: "all"
@@ -47,6 +49,7 @@ trailingComma: "all"
 
 exports[`o1.json 3`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
                                                                                 | printWidth
@@ -69,6 +72,7 @@ printWidth: 80
 
 exports[`o1.json 4`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
 trailingComma: "all"
@@ -92,6 +96,7 @@ trailingComma: "all"
 
 exports[`o1.json 5`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json-stringify"]
 printWidth: 80
                                                                                 | printWidth
@@ -114,6 +119,7 @@ printWidth: 80
 
 exports[`o2.json 1`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
                                                                                 | printWidth
@@ -128,6 +134,7 @@ printWidth: 80
 
 exports[`o2.json 2`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
 trailingComma: "all"
@@ -143,6 +150,7 @@ trailingComma: "all"
 
 exports[`o2.json 3`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
                                                                                 | printWidth
@@ -157,6 +165,7 @@ printWidth: 80
 
 exports[`o2.json 4`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
 trailingComma: "all"
@@ -172,6 +181,7 @@ trailingComma: "all"
 
 exports[`o2.json 5`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json-stringify"]
 printWidth: 80
                                                                                 | printWidth
@@ -190,6 +200,7 @@ printWidth: 80
 
 exports[`o3.json 1`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
                                                                                 | printWidth
@@ -206,6 +217,7 @@ printWidth: 80
 
 exports[`o3.json 2`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
 trailingComma: "all"
@@ -223,6 +235,7 @@ trailingComma: "all"
 
 exports[`o3.json 3`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
                                                                                 | printWidth
@@ -239,6 +252,7 @@ printWidth: 80
 
 exports[`o3.json 4`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
 trailingComma: "all"
@@ -256,6 +270,7 @@ trailingComma: "all"
 
 exports[`o3.json 5`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json-stringify"]
 printWidth: 80
                                                                                 | printWidth
@@ -276,6 +291,7 @@ printWidth: 80
 
 exports[`o4.json 1`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
                                                                                 | printWidth
@@ -306,6 +322,7 @@ printWidth: 80
 
 exports[`o4.json 2`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
 trailingComma: "all"
@@ -337,6 +354,7 @@ trailingComma: "all"
 
 exports[`o4.json 3`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
                                                                                 | printWidth
@@ -367,6 +385,7 @@ printWidth: 80
 
 exports[`o4.json 4`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
 trailingComma: "all"
@@ -398,6 +417,7 @@ trailingComma: "all"
 
 exports[`o4.json 5`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json-stringify"]
 printWidth: 80
                                                                                 | printWidth
@@ -428,6 +448,7 @@ printWidth: 80
 
 exports[`o5.json 1`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
                                                                                 | printWidth
@@ -453,6 +474,7 @@ printWidth: 80
 
 exports[`o5.json 2`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json"]
 printWidth: 80
 trailingComma: "all"
@@ -479,6 +501,7 @@ trailingComma: "all"
 
 exports[`o5.json 3`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
                                                                                 | printWidth
@@ -504,6 +527,7 @@ printWidth: 80
 
 exports[`o5.json 4`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json5"]
 printWidth: 80
 trailingComma: "all"
@@ -530,6 +554,7 @@ trailingComma: "all"
 
 exports[`o5.json 5`] = `
 ====================================options=====================================
+alignObjectProperties: true
 parsers: ["json-stringify"]
 printWidth: 80
                                                                                 | printWidth

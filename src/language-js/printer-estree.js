@@ -198,11 +198,9 @@ function genericPrint(path, options, printPath, args) {
 
 
 function getPropertyPadding(options, path) {
-  /* ** XXX TODO:
   if (!options.alignObjectProperties) {
     return "";
   }
-  // */
 
   const n = path.getValue();
   // console.log('n : ' + JSON.stringify(n));
