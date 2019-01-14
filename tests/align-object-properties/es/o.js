@@ -1,4 +1,5 @@
 o = {
+  shorthand,
   [name]: 'value',
   2:3,
   "k-2":2,
@@ -6,7 +7,16 @@ o = {
 }
 
 o = {
+  shorthand,
   [namelonglonglong]: 'value',
+  2:3,
+  "k-2":2,
+  keyasdf:3
+}
+
+o = {
+  extraLongShorthand,
+  [name]: 'value',
   2:3,
   "k-2":2,
   keyasdf:3
