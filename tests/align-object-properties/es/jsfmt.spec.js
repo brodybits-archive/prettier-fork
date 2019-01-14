@@ -1,1 +1,1 @@
-run_spec(__dirname, ["flow", "typescript"], {alignObjectProperties: true});
+run_spec(__dirname, ["babel", "flow", "typescript"], {alignObjectProperties: true});
