@@ -234,9 +234,11 @@ function getPropertyPadding(options, path) {
   // //console.log('n.name : ' + n.name);
   // console.log('nameLength : ' + nameLength);
 
-  if (nameLength === undefined) {
-    return "";
-  }
+  // FUTURE TBD from arijs/prettier-miscellaneous#10
+  // (does not seem to be needed to pass the tests):
+  // if (nameLength === undefined) {
+  //   return "";
+  // }
 
   // const properties = parentNode.properties;
   const properties = parentObject.properties;
