@@ -1518,8 +1518,6 @@ function printPathNoParens(path, options, print, args) {
       }
 
       if (n.shorthand) {
-        // XXX TODO TEST ALIGN:
-        parts.push("<shorthand/>");
         parts.push(path.call(print, "value"));
       } else {
         //parts.push("<non-shorthand/>");
