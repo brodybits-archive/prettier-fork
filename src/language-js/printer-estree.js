@@ -207,6 +207,7 @@ function getPropertyPadding(options, path) {
   // grandparent node:
   const parentObject = path.getParentNode(1);
 
+  // THIS IS A HACK:
   const shouldBreak = options.originalText
     .substring(options.locStart(parentObject), options.locEnd(parentObject))
     .match(/\{\s*(\/.*)?\n/);
