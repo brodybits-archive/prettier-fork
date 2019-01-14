@@ -202,12 +202,7 @@ function getPropertyPadding(options, path) {
   }
 
   const n = path.getValue();
-  // console.log('n : ' + JSON.stringify(n));
   const type = n.type;
-  // console.log('type : ' + type);
-
-  // TBD NOT NEEDED:`
-  // const parentNode = path.getParentNode();
 
   // grandparent node:
   const parentObject = path.getParentNode(1);
@@ -231,27 +226,17 @@ function getPropertyPadding(options, path) {
       ? n.extra.raw.length
       : undefined;
 
-  // //console.log('n.name : ' + n.name);
-  // console.log('nameLength : ' + nameLength);
-
   // FUTURE TBD from arijs/prettier-miscellaneous#10
   // (does not seem to be needed to pass the tests):
   // if (nameLength === undefined) {
   //   return "";
   // }
 
-  // const properties = parentNode.properties;
   const properties = parentObject.properties;
   const lengths = properties.map(p => {
-    // console.log('p.key: ' + JSON.stringify(p.key));
     if (!p.key) {
       return 0;
     }
-    // console.log('p: ' + JSON.stringify(p));
-    //return p.key.loc.end.column - p.key.loc.start.column + (p.computed ? 2 : 0);
-    //return p.key.loc.end.column - p.key.loc.start.column + (p.computed || (!p.value.type) ? 2 : 0);
-    //return p.key.loc.end.column - p.key.loc.start.column + ((p.key.type === "StringLiteral") || p.computed ? 2 : 0);
-    //return p.key.loc.end.column - p.key.loc.start.column + ((p.type !== "Property" && p.key.type === "Identifier") || p.computed ? 2 : 0);
     return (
       p.key.loc.end.column -
       p.key.loc.start.column +
@@ -261,12 +246,7 @@ function getPropertyPadding(options, path) {
     );
   });
   const maxLength = Math.max.apply(null, lengths);
-  // console.log('maxLength : ' + maxLength);
   const padLength = maxLength - nameLength + 1;
-  //const padLength = maxLength - nameLength + 1 + (p.computed ? 2 : 0);
-  //const padLength = maxLength - nameLength + 1 + ((n.key.type === "StringLiteral") || n.computed ? 2 : 0);
-  //const padLength = maxLength - nameLength + 1 + 2 - ((n.type === "Identifier") || n.computed ? 2 : 0);
-  // console.log('padLength : ' + padLength);
   const padding = " ".repeat(padLength);
 
   return padding;
@@ -1515,7 +1495,6 @@ function printPathNoParens(path, options, print, args) {
       if (n.shorthand) {
         parts.push(path.call(print, "value"));
       } else {
-        //parts.push("<non-shorthand/>");
         let printedLeft;
         const propertyPadding = path.call(
           getPropertyPadding.bind(null, options),
@@ -1527,12 +1506,11 @@ function printPathNoParens(path, options, print, args) {
             path.call(print, "key"),
             "]",
             propertyPadding.slice(2)
-            //propertyPadding
           ]);
         } else {
           printedLeft = concat([
             printPropertyKey(path, options, print),
-            //propertyPadding
+            // propertyPadding
             n.key.type === "Identifier" &&
             !n.computed &&
             options.parser === "json"
