@@ -196,7 +196,6 @@ function genericPrint(path, options, printPath, args) {
   return concat(parts);
 }
 
-
 function getPropertyPadding(options, path) {
   if (!options.alignObjectProperties) {
     return "";
@@ -207,27 +206,28 @@ function getPropertyPadding(options, path) {
   const type = n.type;
   // console.log('type : ' + type);
 
-  const parentNode = path.getParentNode();
+  // TBD NOT NEEDED:`
+  // const parentNode = path.getParentNode();
 
   // grandparent node:
   const parentObject = path.getParentNode(1);
 
-  const shouldBreak = options.originalText.substring(
-    options.locStart(parentObject),
-    options.locEnd(parentObject)
-  ).match(/\{\s*(\/.*)?\n/);
+  const shouldBreak = options.originalText
+    .substring(options.locStart(parentObject), options.locEnd(parentObject))
+    .match(/\{\s*(\/.*)?\n/);
 
   if (!shouldBreak) {
     return "";
   }
 
-  const nameLength = type === "Identifier"
-    ? n.name.length
-    //: type === "Literal"
-    : n.raw
+  const nameLength =
+    type === "Identifier"
+      ? n.name.length
+      : //: type === "Literal"
+      n.raw
       ? n.raw.length
-    // XXX TBD TEST IF n.extra.raw is ever undefined:
-    : n.extra.raw
+      : // XXX TBD TEST IF n.extra.raw is ever undefined:
+      n.extra.raw
       ? n.extra.raw.length
       : undefined;
 
@@ -250,7 +250,13 @@ function getPropertyPadding(options, path) {
     //return p.key.loc.end.column - p.key.loc.start.column + (p.computed || (!p.value.type) ? 2 : 0);
     //return p.key.loc.end.column - p.key.loc.start.column + ((p.key.type === "StringLiteral") || p.computed ? 2 : 0);
     //return p.key.loc.end.column - p.key.loc.start.column + ((p.type !== "Property" && p.key.type === "Identifier") || p.computed ? 2 : 0);
-    return p.key.loc.end.column - p.key.loc.start.column + ((options.parser === "json" && p.key.type === "Identifier") || p.computed ? 2 : 0);
+    return (
+      p.key.loc.end.column -
+      p.key.loc.start.column +
+      ((options.parser === "json" && p.key.type === "Identifier") || p.computed
+        ? 2
+        : 0)
+    );
   });
   const maxLength = Math.max.apply(null, lengths);
   // console.log('maxLength : ' + maxLength);
@@ -1538,11 +1544,11 @@ function printPathNoParens(path, options, print, args) {
           printedLeft = concat([
             printPropertyKey(path, options, print),
             //propertyPadding
-            (
-              n.key.type === "Identifier" &&
-              !n.computed &&
-              options.parser === "json"
-            ) ? propertyPadding.slice(2) : propertyPadding
+            n.key.type === "Identifier" &&
+            !n.computed &&
+            options.parser === "json"
+              ? propertyPadding.slice(2)
+              : propertyPadding
           ]);
         }
         parts.push(
