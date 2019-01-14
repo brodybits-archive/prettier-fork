@@ -225,7 +225,7 @@ function getPropertyPadding(options, path) {
       : // XXX TBD TEST IF n.extra.raw is ever undefined:
       n.extra.raw
       ? n.extra.raw.length
-      : undefined;
+      : -999; // NOT EXPECTED TO GET HERE (DOES NOT CAUSE TEST FAILURE)
 
   // FUTURE TBD from arijs/prettier-miscellaneous#10
   // (does not seem to be needed to pass the tests):
