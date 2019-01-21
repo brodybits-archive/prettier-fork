@@ -26,6 +26,7 @@ prettierx <options> <file(s)>
 | Spaces around the star (\*\) in generator functions  | `false`       | `--generator-star-spacing`      | `generatorStarSpacing: <bool>`     | Add spaces around the star (\*) in generator functions (before and after - from eslint). |
 | Spaces around the star (\*\) in `yield*` expressions | `false`       | `--yield-star-spacing`          | `yieldStarSpacing: <bool>`         | Add spaces around the star (\*) in yield\* expressions (before and after - from eslint). |
 | Indent chains                                        | `true`        | `--no-indent-chains`            | `indentChains: <bool>`             | Print indents at the start of chained calls.                                             |
+| Align ternary lines                                  | `true`        | `--no-align-ternary-lines`      | `alignTernaryLines: <bool>`        | Align ternary lines in case of multiline ternery term (default behavior, conflict with standard) |                                   |
 
 ## standard-like formatting
 
@@ -37,6 +38,7 @@ The following options should be used to _format_ the code according to [standard
 - `--jsx-single-quote` (`jsxSingleQuote: true`)
 - `--no-semi` (`semi: false`)
 - `--yield-star-spacing` (`yieldStarSpacing: true`)
+- `--no-align-ternary-lines` (`alignTernaryLines: false`)
 
 Note that this tool does _not_ follow any of the other [standard js](https://standardjs.com/) rules. It is recommended to use this tool together with eslint, in some form, to achive correct formatting according to [standard js](https://standardjs.com/).
 
