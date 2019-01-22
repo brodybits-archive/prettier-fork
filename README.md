@@ -40,6 +40,8 @@ The following options should be used to _format_ the code according to [standard
 - `--yield-star-spacing` (`yieldStarSpacing: true`)
 - `--no-align-ternary-lines` (`alignTernaryLines: false`)
 
+~~Known conflict with `standard` in ternary returning objects ([brodybits/prettierx#40](https://github.com/brodybits/prettierx/issues/40))~~
+
 Note that this tool does _not_ follow any of the other [standard js](https://standardjs.com/) rules. It is recommended to use this tool together with eslint, in some form, to achive correct formatting according to [standard js](https://standardjs.com/).
 
 <!-- - FUTURE TBD prettierx vs prettier (???):
