@@ -58,8 +58,7 @@ module.exports = {
     type: "boolean",
     default: true,
     description: "Align ternary lines.",
-    oppositeDescription:
-      "Do not align ternary lines."
+    oppositeDescription: "Do not align ternary lines."
   },
   generatorStarSpacing: {
     category: CATEGORY_JAVASCRIPT,
