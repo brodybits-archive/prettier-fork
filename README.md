@@ -9,6 +9,8 @@ Language parsers are supported as if this were `prettier` version `1.15.3` / `1.
 
 Minimum Node.js version: 6
 
+FUTURE TODO: It is desired to provide the additional formatting options in a prettier plugin as discussed in ([`brodybits/prettierx#37`](https://github.com/brodybits/prettierx/issues/37)).
+
 ## CLI Usage
 
 **Quick CLI usage:**
