@@ -79,7 +79,7 @@ async function preparePackage() {
   pkg.bin = "./bin-prettierx.js";
   // FUTURE TBD use this line to specify a different minimum
   // Node.js version, if needed in the future:
-  // pkg.engines.node = ">=6";
+  // pkg.engines.node = ">=8";
   delete pkg.dependencies;
   delete pkg.devDependencies;
   pkg.scripts = {

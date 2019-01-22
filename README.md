@@ -7,7 +7,7 @@ Unofficial fork, intended to provide some additional options to help improve con
 
 Language parsers are supported as if this were `prettier` version `1.15.3` / `1.16.0`; old language parsers are deprecated as if this were `prettier` version `1.15.3` / `1.16.0`.
 
-Minimum Node.js version: 6
+Minimum Node.js version: 8
 
 FUTURE TODO: It is desired to provide the additional formatting options in a prettier plugin as discussed in ([`brodybits/prettierx#37`](https://github.com/brodybits/prettierx/issues/37)).
 
