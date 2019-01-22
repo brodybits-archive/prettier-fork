@@ -5,5 +5,5 @@ run_spec(__dirname, ["babel", "flow", "typescript"], {
   singleQuote: true,
   jsxSingleQuote: true,
   semi: false,
-  alignTernaryLines: false,
+  alignTernaryLines: false
 });
