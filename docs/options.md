@@ -224,9 +224,9 @@ Valid options:
 - `true` - Align ternary lines in case of multiline ternery term.
 - `false` - Do not align ternary lines in case of multiline ternery term.
 
-| Default | CLI Override | API Override   |
-| ------- | ------------ | -------------- |
-| `true`  | `--no-align-ternary-lines`  | `alignTernaryLines: <bool>` |
+| Default | CLI Override               | API Override                |
+| ------- | -------------------------- | --------------------------- |
+| `true`  | `--no-align-ternary-lines` | `alignTernaryLines: <bool>` |
 
 ## Parser
 
