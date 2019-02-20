@@ -700,12 +700,13 @@ function * generator () {<LF>
 <LF>
 // "jsx-quotes": ["error", "prefer-single"],<LF>
 ;() => <div foo='bar' /><LF>
+
+================================================================================
 `;
 
 exports[`correct-ternaries.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
-arrowParens: "always"
 endOfLine: "lf"
 generatorStarSpacing: true
 jsxSingleQuote: true
@@ -947,8 +948,8 @@ fn(<LF>
 // ternaries: nested.js 5<LF>
 let icecream =<LF>
   what == 'cone'<LF>
-    ? (p) => (p ? \`here's your \${p} cone\` : \`just the empty cone for you\`)<LF>
-    : (p) => \`here's your \${p} \${what}\`<LF>
+    ? p => (p ? \`here's your \${p} cone\` : \`just the empty cone for you\`)<LF>
+    : p => \`here's your \${p} \${what}\`<LF>
 <LF>
 a<LF>
   ? literalline<LF>
@@ -976,7 +977,7 @@ debug<LF>
     ? 'partially visible'<LF>
     : 'hidden'<LF>
   : null<LF>
-;(a) =><LF>
+a =><LF>
   a<LF>
     ? () => {<LF>
       a<LF>
@@ -984,8 +985,8 @@ debug<LF>
     : () => {<LF>
       a<LF>
     }<LF>
-;(a) => a || a<LF>
-;(a) =><LF>
+a => a || a<LF>
+a =><LF>
   a ? aasdasdasdasdasdasdaaasdasdasdasdasdasdasdasdasdasdasdasdasdaaaaaa : a<LF>
 <LF>
 // =============================================================================<LF>
@@ -1048,7 +1049,6 @@ const StorybookLoader = ({ match }) =><LF>
       </Content><LF>
     </Message><LF>
   )<LF>
-=======
 
 ================================================================================
 `;
@@ -1829,12 +1829,13 @@ const dress = isSpace<LF>
     shirts: 3,<LF>
     paints: 3<LF>
   }<LF>
+
+================================================================================
 `;
 
 exports[`incorrect-ternaries.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
-arrowParens: "always"
 endOfLine: "lf"
 generatorStarSpacing: true
 jsxSingleQuote: true
@@ -2048,8 +2049,8 @@ fn(<LF>
 // ternaries: nested.js 5<LF>
 let icecream =<LF>
   what == 'cone'<LF>
-    ? (p) => (p ? \`here's your \${p} cone\` : \`just the empty cone for you\`)<LF>
-    : (p) => \`here's your \${p} \${what}\`<LF>
+    ? p => (p ? \`here's your \${p} cone\` : \`just the empty cone for you\`)<LF>
+    : p => \`here's your \${p} \${what}\`<LF>
 <LF>
 a<LF>
   ? literalline<LF>
@@ -2078,7 +2079,7 @@ debug<LF>
     : 'hidden'<LF>
   : null<LF>
 <LF>
-;(a) =><LF>
+a =><LF>
   a<LF>
     ? () => {<LF>
       a<LF>
@@ -2086,8 +2087,8 @@ debug<LF>
     : () => {<LF>
       a<LF>
     }<LF>
-;(a) => a || a<LF>
-;(a) =><LF>
+a => a || a<LF>
+a =><LF>
   a ? aasdasdasdasdasdasdaaasdasdasdasdasdasdasdasdasdasdasdasdasdaaaaaa : a<LF>
 <LF>
 // =============================================================================<LF>
@@ -2150,7 +2151,6 @@ const StorybookLoader = ({ match }) =><LF>
       </Content><LF>
     </Message><LF>
   )<LF>
-=======
 
 ================================================================================
 `;
