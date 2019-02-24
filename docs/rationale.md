@@ -183,6 +183,24 @@ This practice is also common in [standard] which uses a semicolon-free style.
 
 [standard]: https://standardjs.com/rules.html#semicolons
 
+#### A warning about no semicolons
+
+In case of some code such as this:
+
+```js
+const str = 'abc'
+
+[1, 2, 3].forEach(secondaryEffectFn)
+```
+
+Prettier will just follow the JavaScript language rules and shorten the code as follows:
+
+```js
+const str = 'abc'[(1, 2, 3)].forEach(secondaryEffectFn)
+```
+
+The recommended solution is to use a tool such as ESLint to check the code for this kind of a pattern before running Prettier.
+
 ### Print width
 
 The [`--print-width`](options.md#print-width) is more of a guideline to Prettier than a hard rule. It generally means “try to make lines this long, go shorter if needed and longer in special cases.”

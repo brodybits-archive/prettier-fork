@@ -48,7 +48,7 @@ Print semicolons at the ends of statements.
 Valid options:
 
 - `true` - Add a semicolon at the end of every statement.
-- `false` - Only add semicolons at the beginning of lines that [may introduce ASI failures](rationale.md#semicolons).
+- `false` - Only add semicolons at the beginning of lines that [may introduce ASI failures](rationale.md#semicolons). (See this [warning about no semicolons](rationale.md#a-warning-about-no-semicolons).)
 
 | Default | CLI Override | API Override   |
 | ------- | ------------ | -------------- |
