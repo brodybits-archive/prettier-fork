@@ -4,7 +4,7 @@ const path = require("path");
 const camelCase = require("camelcase");
 const dashify = require("dashify");
 const fs = require("fs");
-const globby = require("globby");
+const glob = require("glob-gitignore");
 const chalk = require("chalk");
 const readline = require("readline");
 const stringify = require("json-stable-stringify");
@@ -409,7 +409,7 @@ function eachFilename(context, patterns, callback) {
   patterns = patterns.concat(["!**/.{git,svn,hg}/**", "!./.{git,svn,hg}/**"]);
 
   try {
-    const filePaths = globby
+    const filePaths = glob
       .sync(patterns, { dot: true, nodir: true })
       .map(filePath => path.relative(process.cwd(), filePath));
 
