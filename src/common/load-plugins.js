@@ -2,7 +2,7 @@
 
 const uniqBy = require("lodash.uniqby");
 const fs = require("fs");
-const globby = require("globby");
+const glob = require("fast-glob");
 const path = require("path");
 const resolve = require("resolve");
 const thirdParty = require("./third-party");
@@ -94,7 +94,7 @@ function loadPlugins(plugins, pluginSearchDirs) {
 }
 
 function findPluginsInNodeModules(nodeModulesDir) {
-  const pluginPackageJsonPaths = globby.sync(
+  const pluginPackageJsonPaths = glob.sync(
     [
       "prettier-plugin-*/package.json",
       "@*/prettier-plugin-*/package.json",

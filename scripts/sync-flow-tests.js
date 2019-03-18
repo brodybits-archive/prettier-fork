@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const flowParser = require("flow-parser");
-const globby = require("globby");
+const glob = require("fast-glob");
 const mkdirp = require("mkdirp");
 const path = require("path");
 const rimraf = require("rimraf");
@@ -29,10 +29,8 @@ function tryParse(file, content) {
 }
 
 function syncTests(syncDir) {
-  const specFiles = globby.sync(
-    path.join(FLOW_TESTS_DIR, "**", SPEC_FILE_NAME)
-  );
-  const filesToCopy = globby.sync(path.join(syncDir, "**/*.js"));
+  const specFiles = glob.sync(path.join(FLOW_TESTS_DIR, "**", SPEC_FILE_NAME));
+  const filesToCopy = glob.sync(path.join(syncDir, "**/*.js"));
 
   if (filesToCopy.length === 0) {
     throw new Error(

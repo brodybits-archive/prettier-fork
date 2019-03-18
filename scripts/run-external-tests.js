@@ -1,7 +1,7 @@
 "use strict";
 
 const fs = require("fs");
-const globby = require("globby");
+const glob = require("fast-glob");
 const format = require("../src/cli-util").format;
 
 function tryFormat(file) {
@@ -21,7 +21,7 @@ function tryFormat(file) {
 }
 
 function runExternalTests(patterns) {
-  const testFiles = globby.sync(patterns);
+  const testFiles = glob.sync(patterns);
 
   if (testFiles.length === 0) {
     throw new Error(`No matching files. Patterns tried: ${patterns.join(" ")}`);
