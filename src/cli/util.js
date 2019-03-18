@@ -411,6 +411,7 @@ function eachFilename(context, patterns, callback) {
   try {
     const filePaths = glob
       .sync(patterns, { dot: true, nodir: true })
+      .sort()
       .map(filePath => path.relative(process.cwd(), filePath));
 
     if (filePaths.length === 0) {
