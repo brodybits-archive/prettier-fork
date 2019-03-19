@@ -42,6 +42,32 @@ Examples:
 
 -->
 
+- @typescript-eslint/typescript-estree 1.4.2 update to preserve generics in object methods ([#5989] by [@brodybits] and [@j-f1])
+
+  <!-- prettier-ignore -->
+  ```ts
+  // Input
+  export default {
+    load<K, T>(k: K, t: T) {
+      return {k, t};
+    }
+  }
+
+  // Output (Prettier stable)
+  export default {
+    load(k: K, t: T) {
+      return {k, t};
+    }
+  }
+
+  // Output (Prettier master)
+  export default {
+    load<K, T>(k: K, t: T) {
+      return {k, t};
+    }
+  }
+  ```
+
 - Config: Support shared configurations ([#5963] by [@azz])
 
   Sharing a Prettier configuration is simple: just publish a module that exports a configuration object, say `@company/prettier-config`, and reference it in your `package.json`:
